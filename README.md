@@ -4,7 +4,7 @@ This is a project from Udacity's Nanodegree program "Front-End Web Developer". T
 
 ## Run Game
 
-Click on "Clone or Download" on this repository page and download it as ZIP. Extract the folder content and open "index.html" from a brownser for the game to run.
+Click on "Clone or Download" on this repository page and download it as ZIP. Extract the folder content and open "index.html" from a browser for the game to run.
 
 ## Game Rules
 
