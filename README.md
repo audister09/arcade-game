@@ -5,7 +5,7 @@ The project is a game based on the arcade game **Frogger** by **Konami** (more i
 
 ## Run Game
 
-Click on `Clone or download` button from this repository page, then select as `ZIP`. Extract the folder content and open "index.html" from a browser for the game to run.
+Click on `Clone or download` button from this repository page, then select as `Download ZIP`. Extract the folder content and open "index.html" from a browser for the game to run.
 
 ## Game Rules
 
