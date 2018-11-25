@@ -13,3 +13,7 @@ The goal of the game is to reach the water side while avoiding getting hit by th
 ## Control
 
 Use the keyboard arrow keys to control the player movement direction.
+
+## Actual game
+
+Checkout the game here: https://audister09.github.io/fend-nanodegree-arcade-game/
