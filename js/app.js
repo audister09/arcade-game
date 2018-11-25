@@ -1,3 +1,9 @@
+let gameScore = 0,
+	lives = 3,
+	livesLeft = document.querySelector('.lives > span'),
+	score = document.querySelector('.score > span');
+
+
 // Enemies our player must avoid
 const Enemy = function (x, y, speed) {
     this.x = x;
@@ -10,10 +16,11 @@ const Enemy = function (x, y, speed) {
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
     this.x += this.speed * dt;
+    livesLeft.innerText = lives;
 
-    if (this.x > 550) {
-        this.x = -100;
-        this.speed = 100 + Math.floor(Math.random() * 512);
+    if (this.x > 505) {
+        this.x = -150;
+        this.speed = 150 + Math.floor(Math.random() * 800);
     }
 
 //collision between player & enemies
@@ -23,7 +30,17 @@ if (player.x < this.x + 60 &&
     30 + player.y > this.y) {
     player.x = 200;
     player.y = 380;
-}
+    lives--;
+    livesLeft.innerText = lives;
+    if (lives === 0) {
+      //Will replace with modal
+      confirm(`Game Over, dude! Do you wish to play again?`);
+      lives = 3;
+      gameScore = 0;
+      livesLeft.innerText = lives;
+      score.innerText = '';
+    }
+ }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -69,6 +86,16 @@ Player.prototype.handleInput = function (keyPress) {
             player.x = 202;
             player.y = 405;
         }, 600);
+  // When player reaches the water, 100 points will be added to their game score
+        gameScore++;
+        score.innerText = gameScore * 100;
+        if (gameScore === 10 && lives > 0) {
+          confirm('You have won the game!');
+          lives = 3;
+          gameScore = 0;
+          livesLeft.innerText = lives;
+          score.innerText = '';
+        }
     }
 }
 
