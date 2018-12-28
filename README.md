@@ -22,4 +22,4 @@ Use the keyboard arrow keys to control the player movement direction.
 
 ## Actual game
 
-Checkout the game here: https://audister09.github.io/arcade-game/
+Checkout the game here: https://rickcosme9.github.io/arcade-game/
